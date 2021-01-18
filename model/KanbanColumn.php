@@ -1,8 +1,8 @@
 <?php
 
-//namespace KanbanProject\Model;
+namespace KanbanProject\Model;
 
-class KanbanColumn{
+class KanbanColumn {
 	private $id;
 	private $nom;
 	
@@ -69,7 +69,7 @@ class KanbanColumn{
 	/**
 	* Renvois toute les colonne associé au kanban d'id $kanbanId (potentiellement useless)
 	*/
-	public static function getAllKanbanColumns($kanbanId){
+	public static function getAllKanbanColumns($kanbanId) {
 	 try {
 		
 		$request = $bdd -> prepare('select * from KanbanColumns where kanbanId=:kanbanid');

@@ -8,5 +8,6 @@
   $owner = 1;
   $name = $_POST['name'];
   $participe = 1;
-  Kanban::createKanban($name, $owner, $public, $participe);
+  // Kanban::createKanban($name, $owner, $public, $participe);
+  Kanban::createKanban("monKanban", 2, true, array("Michel@mail", "JeanLuc@mail", "Martine@mail"));
 ?>

@@ -1,8 +1,8 @@
 <?php
-use KanbanColumn;
+use Model\KanbanColumn as KanbanColumn;
 //namespace KanbanProject\Model;
 
-class KanbanProject {
+class Kanban {
  private $id;
  private $nom;
  private $owner;
@@ -67,7 +67,7 @@ class KanbanProject {
 	return null;
  }
  
- public static function addParticipant(Kanban $kanban, String $mail){
+ public static function addParticipant(Kanban $kanban, String $mail) {
 	 try{
 		$bdd = new PDO('mysql:host=localhost;dbname=projet;charset=utf8','projet','tejorp');
 				
@@ -130,7 +130,7 @@ class KanbanProject {
 				    $request = null;
                  }
 				
-				$request = $bdd -> prepare('select * from kanbanParticip where Kid = :id;'):
+				$request = $bdd -> prepare('select * from kanbanParticip where Kid = :id;');
 				$request -> execute(array('id' => $data['id']));
 				$verif = $request -> fetch();
 				
@@ -190,8 +190,8 @@ class KanbanProject {
 			return null;
 		}
 		
-	 } catch(PDOException pdoe){
-		 print "Error with PDO : " $pdeo->getMessage()."<br/>";
+	 } catch(PDOException $pdoe){
+		 print "Error with PDO : ". $pdeo->getMessage()."<br/>";
 		 //peut être changer par $pdeo->errorInfo[2]; pour avoir les erreur sql
 		 die();
 	 }
@@ -232,8 +232,8 @@ class KanbanProject {
 			return null;
 		}
 		
-	 } catch(PDOException pdoe){
-		 print "Error with PDO : " $pdeo->getMessage()."<br/>";
+	 } catch(PDOException $pdoe){
+		 print "Error with PDO : ". $pdeo->getMessage()."<br/>";
 		 //peut être changer par $pdeo->errorInfo[2]; pour avoir les erreur sql
 		 die();
 	 }
@@ -303,8 +303,8 @@ class KanbanProject {
 		
 		return $pKanban;
 		
-	 } catch(PDOException pdoe){
-		 print "Error with PDO : " $pdeo->getMessage()."<br/>";
+	 } catch(PDOException $pdoe){
+		 print "Error with PDO : ". $pdeo->getMessage()."<br/>";
 		 //peut être changer par $pdeo->errorInfo[2]; pour avoir les erreur sql
 		 die();
 	 }
@@ -377,8 +377,8 @@ class KanbanProject {
 		
 		return $pKanban;
 		
-	 } catch(PDOException pdoe){
-		 print "Error with PDO : " $pdeo->getMessage()."<br/>";
+	 } catch(PDOException $pdoe){
+		 print "Error with PDO : ".$pdeo->getMessage()."<br/>";
 		 //peut être changer par $pdeo->errorInfo[2]; pour avoir les erreur sql
 		 die();
 	 }
@@ -392,7 +392,6 @@ class KanbanProject {
 		$request -> execute(array('mail' => $email));
 		$tmp = $request -> fetch();
 		
-		$request 
 		
 		$request = $bdd -> prepare('select * from kanbans where id in(select id from kanbanParticip where Uid = :uid);');
 		$request -> execute(array('uid' => $tmp['id']));
@@ -453,8 +452,8 @@ class KanbanProject {
 		
 		return $pKanban;
 		
-	 } catch(PDOException pdoe){
-		 print "Error with PDO : " $pdeo->getMessage()."<br/>";
+	 } catch(PDOException $pdoe){
+		 print "Error with PDO : ". $pdeo->getMessage()."<br/>";
 		 //peut être changer par $pdeo->errorInfo[2]; pour avoir les erreur sql
 		 die();
 	 }
