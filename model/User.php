@@ -2,8 +2,7 @@
 
 //namespace KanbanProject\Model;
 
-class User
-{
+class User {
 	private $mail;
 	private $id;
 	private $pwd;

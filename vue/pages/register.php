@@ -5,7 +5,7 @@
 <section class="hero is-primary is-fullheight">
   <div class="hero-body">
     <div class="container">
-          <form action="../vue/controleur/createUser.php" method="post" class="box">
+          <form action="../controleur/createUser.php" method="post" class="box">
             <div class="field">
               <input type="email" placeholder="Adresse e-mail" class="input" name="mail" required>
             </div>

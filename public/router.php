@@ -12,6 +12,8 @@ if ($section[0] == 'accueil') {
   require (BASE . 'login.php');
 } elseif ($section[0] == 'register') {
   require (BASE . 'register.php');
+} elseif ($section[0] == 'addKanban') {
+  require (BASE . 'addKanban.php');
 } else {
   echo "page introuvable";
 }

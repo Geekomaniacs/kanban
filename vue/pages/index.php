@@ -27,10 +27,10 @@
   }
   $name = "Publics";
   $kanbans = array (
-    array("name" => "se", "id" => "s5"),
-    array("name" => "p", "id" => "s2"),
-    array("name" => "mpoo", "id" => "s3"),
-    array("name" => "pop", "id" => "s4")
+    array("name" => "se", "id" => 1),
+    array("name" => "p", "id" => 2),
+    array("name" => "mpoo", "id" => 3),
+    array("name" => "pop", "id" => 4)
   );
   require("../vue/components/kanbanList.php");
   if (isset($_SESSION['login'])) {

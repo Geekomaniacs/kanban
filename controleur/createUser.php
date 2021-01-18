@@ -1,5 +1,5 @@
 <?php
-  require('../modele/User.php');
+  require('../model/User.php');
   User::createUser($_POST['mail'], $_POST['password']);
-  header('Location: ../vue/pages/index.php');
+  header('Location: /accueil');
 ?>

@@ -2,7 +2,7 @@
 
 //namespace KanbanProject\Model;
 
-class KanbanItem{
+class KanbanItem {
 	private $id;
 	private $title;
 	private $owner;
