@@ -1,0 +1,31 @@
+.kanbansPage {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  border : 2px solid black;
+  margin: 5px;
+}
+
+.draggable {
+  cursor: move;
+}
+
+input[type="date"] {
+  border: none;
+  background-color: transparent;
+}
+
+header {
+  background-color: beige;
+}
